@@ -418,6 +418,7 @@ img{
 
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
 
 .footer-link-logo{
@@ -471,7 +472,6 @@ img{
  
 .social-footer{
     margin-left: 70px;
-    margin-top: 12px;
 }
 
 .social-text{
@@ -511,8 +511,7 @@ img{
 }
 
 .mail-send-footer{
-    margin-left: 93px;
-    margin-top: 12px;
+    margin-left: auto;
 }
 
 .mail-send-text{
@@ -522,11 +521,11 @@ img{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-text-light);
+    margin-bottom: 20px;
 }
 
 .input-send{
     display: flex;
-    margin-top: 20px;
 }
 
 .input-send-mail{
@@ -730,7 +729,7 @@ img{
 
 .form-label {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.67;
     letter-spacing: 0.01em;
@@ -739,7 +738,7 @@ img{
 
 .form-modal{
     position: relative;
-    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 .modal-lilte{
@@ -781,6 +780,10 @@ img{
 }
 
 .form-coment{
+    display: block;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
     height: 138px;
     width: 100%;
     padding: 12px 16px;
@@ -792,52 +795,47 @@ img{
     transition: border-color var(--time-trasform) var(--timing-function);
 }
 
+.form-coment::placeholder{
+    color: rgba(117, 117, 117, 0.5);
+}
+
 .form-coment:hover, .form-coment:focus {
     border-color: var(--color-brand);
 }   
-
-.checkbox{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
 
 .checkbox-input{
     appearance: none;
 }
 
 .checkbox-label{
-    margin-left: 12px;
-    left: 24px;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--color-secondary);
+    margin-top: 20px;
 }
 
 .agreement-link{
+    margin-left: 4px;
     color: var(--color-brand);
-    text-decoration-line: underline;
+    text-underline-position: under;
 }
 
 .check-icon{
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+    margin-right: 8px;
     fill: var(--color-text-light);
     border: 2px solid var(--color-logo);
-    border-radius: 3px;
+    border-radius: 2px;
     transition: fill var(--time-trasform) var(--timing-function), background-color var(--time-trasform) var(--timing-function), border var(--time-trasform) var(--timing-function);
 }
 
 .checkbox-input:checked + .check-icon{
    fill: var(--color-text-light);
    background-color: var(--color-brand);
-   border:none;
+   border-color: transparent;
 }
 
 .button-modal{
@@ -878,8 +876,14 @@ img{
     right: 8px;
     cursor: pointer;
     outline: none;
+    padding: 0;
+    transition: color var(--time-trasform) var(--timing-function);
+}
+
+.close-button-icon{
+    fill: currentcolor;
 }
 
 .madal-close-button:hover, .madal-close-button:focus{
-    fill: var(--color-brand);
+    color: var(--color-brand);
 }
